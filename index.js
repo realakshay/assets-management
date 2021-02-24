@@ -7,6 +7,10 @@ require("dotenv/config")
 
 const app = express();
 
+app.get("/", (req, res)=>{
+    res.status(200).send("Yeah Working Fine")
+})
+
 app.use(bodyParser.json())
 
 app.use("/device", deviceRoute)
